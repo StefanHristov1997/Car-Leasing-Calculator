@@ -61,6 +61,24 @@ input[type="range"] {
     margin-bottom: 10px;
 }
 
+.leasing-details .details-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leasing-details .left-column,
+.leasing-details .right-column {
+    width: 45%;
+}
+
 .leasing-details p {
     margin: 5px 0;
+}
+
+.leasing-details .details-columns p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
 }

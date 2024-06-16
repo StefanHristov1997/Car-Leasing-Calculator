@@ -7,45 +7,50 @@
     <title>Car Leasing Calculator</title>
 </head>
 <body>
-    <div class="containter">
+    <div class="container">
       <h1>Car Leasing Calculator</h1>
-       <div class="calculator">
-         <div class="input-group">
-            <label for="car-type">Car Type:</label>
-            <select id="car-type">
-                <option>Brand New</option>
-                <option>Used</option>
-            </select>
-         </div>
-         <div class="input-group">
-              <label for="inputLeasePeriod">Lease Period (months):</label>
-              <select id="lease-period">
-                <option value="60">60</option>
-                <option value="48">48</option>
-                <option value="36">36</option>
-                <option value="24">24</option>
-                <option value="12">12</option>
-              </select>
+      <div class="calculator">
+        <div class="input-group">
+          <label for="car-type">Car Type:</label>
+          <select id="car-type">
+            <option value="brand-new">Brand New</option>
+            <option value="used">Used</option>
+          </select>
         </div>
-         <div class="input-group">
-            <label for="in">Car Value (€10,000 - €200,000):</label>
-            <input type="text" id="car-value" value="">
-            <input type="range" min="10000" max="200000" value="120000" id="car-value-slider">
-         </div>
-         <div class="input-group">
-            <label for="inputDownPayment">Down Payment (10% - 50%):</label>
-            <input type="text" id="car-value" value="">
-            <input type="range" min="10" max="50" value="10" id="down-payment-slider">
-         </div>
-         <div class="leasing-details">
-              <h2>Leasing Details</h2>
-              <p>Total Leasing Cost: <span id="total-leasing-cost"></span></p>
-              <p>Monthly Installment: <span id="monthly-installment"></span></p>
-              <p>Down Payment: <span id="down-payment-value"></span></p>
-              <p>Interest Rate: <span id="interest-rate"></span></p>
-          </div>
+        <div class="input-group">
+          <label for="car-value">Car Value (€10,000 - €200,000):</label>
+          <input type="number" id="car-value" value="120000" min="10000" max="200000">
+          <input type="range" min="10000" max="200000" value="120000" id="car-value-slider">
+        </div>
+        <div class="input-group">
+          <label for="lease-period">Lease Period (months):</label>
+          <select id="lease-period">
+            <option value="24">24</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+            <option value="60">60</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="down-payment">Down Payment (10% - 50%):</label>
+          <input type="number" id="down-payment" value="10" min="10" max="50">
+          <input type="range" min="10" max="50" value="10" id="down-payment-slider">
+        </div>
+        <div class="leasing-details">
+            <h2>Leasing Details</h2>
+            <div class="details-columns">
+              <div class="left-column">
+                <p>Total Leasing Cost: <span id="total-leasing-cost">€128408.32</span></p>
+                <p>Down Payment: <span id="down-payment-value">€12000.00</span></p>
+              </div>
+              <div class="right-column">
+                <p>Monthly Installment: <span id="monthly-installment">€1940.14</span></p>
+                <p>Interest Rate: <span id="interest-rate">2.99%</span></p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
+    <script src="./calculator.js"></script>
 </body>
 </html>
