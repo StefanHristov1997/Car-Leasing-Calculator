@@ -3,6 +3,7 @@ A user-friendly leasing calculator.
 
 ### My Briefly Solution
 <b> 
+   
 1. I started by creating an html page with the content described in the instructions, four fields for user input and a section for the lease details.
    
 2. Then I added a styles.css file to style the page as close as possible to the design shown in the pictures.
