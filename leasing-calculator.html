@@ -23,8 +23,13 @@
          </div>
          <div class="input-group">
              <label for="inputLeasePeriod">Lease Period (months):</label>
-             <input type="text" id="lease-period">
-             <input type="range" min="12" max="60" value="60" id="lease-period">             
+              <select id="lease-period">
+                <option value="60">60</option>
+                <option value="48">48</option>
+                <option value="36">36</option>
+                <option value="24">24</option>
+                <option value="12">12</option>
+              </select>
          </div>
          <div class="input-group">
             <label for="inputDownPayment">Down Payment (10% - 50%):</label>
