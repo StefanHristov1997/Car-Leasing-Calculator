@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leasing Calculator Form</title>
+    <title>Car Leasing Calculator</title>
 </head>
 <body>
     <div class="leasing-containter">
-      <div class="calculator-form">
+      <div class="calculator">
         <h1>Car Leasing Calculator</h1>
-        <form action="/leasing-calculator" method="POST">
          <div class="input-group">
             <label for="inputCarType">Car Type:</label>
             <select id="car-type">
@@ -27,12 +26,18 @@
              <input type="text" id="lease-period">
              <input type="range" min="12" max="60" value="60" id="lease-period">             
          </div>
-          <div class="input-group">
-            <label for="down-payment">Down Payment (10% - 50%):</label>
+         <div class="input-group">
+            <label for="inputDownPayment">Down Payment (10% - 50%):</label>
             <input type="range" min="10" max="50" value="10" id="down-payment-slider">
-          </div>
          </div>
-        </for>
+         <div class="leasing-details">
+              <h2>Leasing Details</h2>
+              <p>Total Leasing Cost: <span id="total-leasing-cost"></span></p>
+              <p>Monthly Installment: <span id="monthly-installment"></span></p>
+              <p>Down Payment: <span id="down-payment-value"></span></p>
+              <p>Interest Rate: <span id="interest-rate"></span></p>
+          </div>
+        </div>
       </div>
     </div>
 </body>
