@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const leasePeriod = parseInt(leasePeriodSelect.value);
 
         const loanAmount = carValue - downPaymentValue;
-        const monthlyInstallment = (loanAmount * (interestRate / 12)) / (1 - Math.pow(1 + (interestRate / 12), -leasePeriod));
+        const monthlyInterestRate = interestRate / 12;
+        const monthlyInstallment = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, - leasePeriod));
         const totalLeasingCost = (monthlyInstallment * leasePeriod) + downPaymentValue;
 
         document.getElementById('total-leasing-cost').textContent = `€${totalLeasingCost.toFixed(2)}`;
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downPaymentSlider.value = downPaymentInput.value;
         updateLeasingDetails();
     });
-    
+
     downPaymentSlider.addEventListener('input', () => {
         downPaymentInput.value = downPaymentSlider.value;
         updateLeasingDetails();
