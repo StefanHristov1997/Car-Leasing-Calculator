@@ -51,6 +51,13 @@ input[type="range"] {
     margin-top: 10px;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
 .leasing-details {
     border-top: 1px solid #cccccc;
     padding-top: 20px;
