@@ -8,17 +8,20 @@
 <body>
     <div class="leasing-containter">
       <div class="calculator-form">
-        <h2>Car Leasing Calculator</h2>
+        <h1>Car Leasing Calculator</h1>
         <form action="/leasing-calculator" method="POST">
-         <div class="form-group">
-            <label for="inputCarType">Car Type</label>
-            <select >
+         <div class="input-group">
+            <label for="inputCarType">Car Type:</label>
+            <select id="car-type">
                 <option>Brand New</option>
                 <option>Used</option>
             </select>
-
          </div>
-
+         <div class="input-group">
+            <label for="car-value">Car Value (€10,000 - €200,000):</label>
+            <input type="number" id="car-value" value="120000">
+            <input type="range" min="10000" max="200000" value="120000" id="car-value-slider">
+         </div>
 
         </for>
       </div>
